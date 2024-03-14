@@ -17,7 +17,7 @@ const Course = ({ course ,handelSelect}) => {
                         <TbCurrencyDollar />
                         <h3>Price : {price}</h3>
                         <IoBookOutline />
-                        <h3>Credit : {credit}</h3>
+                        <h3>Credit : {credit} hr</h3>
                     </div>
                     <div className="card-actions w-full">
                         <button onClick={() => handelSelect(course)} className="btn btn-primary w-full text-lg font-bold">Select</button>
