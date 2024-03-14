@@ -8,6 +8,9 @@ import Header from './components/Header/Header'
 
 function App() {
 
+  const [cost, setCost] = useState(0);
+  const [credit, setCredit] = useState(0);
+  const [remainingCredit, setRemainingCredit] = useState(15);
 
 
   const [carts, setCarts] = useState([]);
@@ -18,12 +21,31 @@ function App() {
     const isExist = carts.find(cart => cart.id === course.id);
 
     if (!isExist) {
-      const newCarts = [...carts, course];
-      setCarts(newCarts);
+     
+      if(remainingCredit !== 0 && remainingCredit >= course.credit )
+      {
+        const newCarts = [...carts, course];
+        setCarts(newCarts);
+
+        const newCredit = parseFloat(course.credit)
+        
+        setRemainingCredit(remainingCredit - newCredit);
+        setCredit(credit + newCredit);
+
+        const newCost = parseFloat(course.price);
+        setCost(cost + newCost);
+      }
+      else{
+        return alert('Credit Limit Exceed');
+
+    }
     }
     else {
       alert('Already Selected !!!');
     }
+
+    
+        
   }
 
 
@@ -39,7 +61,7 @@ function App() {
             <Courses handelSelect={handelSelect}></Courses>
           </div>
           <div className='w-1/4'>
-            <Carts carts={carts}></Carts>
+            <Carts carts={carts} credit={credit} cost={cost}></Carts>
           </div>
         </div>
       </main>

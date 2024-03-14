@@ -1,33 +1,12 @@
-import { useEffect, useState } from "react";
+
 import PropTypes from 'prop-types';
 
-const Carts = ({ carts }) => {
+const Carts = ({ carts , credit, cost}) => {
     console.log(carts);
 
-    const [cost, setCost] = useState(0);
-    const [credit, setCredit] = useState(0);
+   
 
-
-    useEffect(() => {
-        let newCost = 0;
-        let newCredit = 0;
-        for (const cart of carts) {
-            let priceNumber = parseFloat(cart.price);
-            let creditNumber = parseFloat(cart.credit);
-            newCost = newCost + priceNumber;
-            newCredit = newCredit + creditNumber;
-        }
-
-        if (newCredit <= 15) {
-            setCost(newCost);
-            setCredit(newCredit);
-
-        }
-        else{
-            return alert('Credit Limit Exceed');
-
-        }
-    }, [carts])
+    
 
 
 
@@ -53,7 +32,9 @@ const Carts = ({ carts }) => {
 };
 
 Carts.propTypes={
-    carts : PropTypes.array
+    carts : PropTypes.array,
+    credit : PropTypes.number,
+    cost : PropTypes.number
 }
 
 export default Carts;
