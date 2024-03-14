@@ -1,8 +1,8 @@
 import { TbCurrencyDollar } from "react-icons/tb";
 import { IoBookOutline } from "react-icons/io5";
 
-const Course = ({ course }) => {
-    console.log(course);
+const Course = ({ course ,handelSelect}) => {
+    // console.log(course);
     const { id, title, cart_img, description, price, credit } = course;
     return (
         <div>
@@ -20,7 +20,7 @@ const Course = ({ course }) => {
                         <h3>Credit : {credit}</h3>
                     </div>
                     <div className="card-actions w-full">
-                        <button className="btn btn-primary w-full text-lg font-bold">Select</button>
+                        <button onClick={() => handelSelect(course)} className="btn btn-primary w-full text-lg font-bold">Select</button>
                     </div>
                 </div>
             </div>

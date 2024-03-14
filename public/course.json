@@ -4,7 +4,7 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "Introduction to Python Programming",
       "description": "Learn the basics of Python programming language from scratch.",
-      "price": "$49.99",
+      "price": "49.99",
       "credit": "3"
     },
     {
@@ -12,7 +12,7 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "Web Development with HTML, CSS, and JavaScript",
       "description": "Build responsive and interactive websites using the core web technologies.",
-      "price": "$79.99",
+      "price": "79.99",
       "credit": "5"
     },
     {
@@ -20,7 +20,7 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "Data Science Fundamentals",
       "description": "Explore the foundations of data science, including statistics, data analysis, and visualization.",
-      "price": "$99.99",
+      "price": "99.99",
       "credit": "6"
     },
     {
@@ -28,7 +28,7 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "Machine Learning Essentials",
       "description": "Understand the fundamental concepts of machine learning and implement basic algorithms.",
-      "price": "$129.99",
+      "price": "129.99",
       "credit": "8"
     },
     {
@@ -36,7 +36,7 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "iOS App Development with Swift",
       "description": "Learn to create iOS applications using the Swift programming language.",
-      "price": "$89.99",
+      "price": "89.99",
       "credit": "4"
     },
     {
@@ -44,7 +44,7 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "Introduction to Cybersecurity",
       "description": "Explore the basics of cybersecurity, including common threats and defense strategies.",
-      "price": "$69.99",
+      "price": "69.99",
       "credit": "4"
     },
     {
@@ -52,15 +52,15 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "Digital Marketing Fundamentals",
       "description": "Learn the essentials of digital marketing, including SEO, social media, and email campaigns.",
-      "price": "$59.99",
+      "price": "59.99",
       "credit": "3"
     },
     {
       "id": "8",
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
-      "title": "Blockchain Basics",
+      "title": "Blockchain Basics to Advanced",
       "description": "Discover the foundational concepts of blockchain technology and its applications.",
-      "price": "$109.99",
+      "price": "109.99",
       "credit": "6"
     },
     {
@@ -68,7 +68,7 @@
       "cart_img": "https://i.ibb.co/Hhd6Z2f/online-blog.jpg",
       "title": "Artificial Intelligence: Concepts and Applications",
       "description": "Explore the principles and applications of artificial intelligence in various fields.",
-      "price": "$149.99",
+      "price": "149.99",
       "credit": "8"
     }
   ]
