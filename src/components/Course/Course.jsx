@@ -1,9 +1,10 @@
 import { TbCurrencyDollar } from "react-icons/tb";
 import { IoBookOutline } from "react-icons/io5";
+import PropTypes from 'prop-types';
 
 const Course = ({ course ,handelSelect}) => {
     // console.log(course);
-    const { id, title, cart_img, description, price, credit } = course;
+    const { title, cart_img, description, price, credit } = course;
     return (
         <div>
             <div className="card bg-base-100 shadow-xl">
@@ -27,5 +28,11 @@ const Course = ({ course ,handelSelect}) => {
         </div>
     );
 };
+
+
+Course.propTypes={
+    course : PropTypes.object,
+    handelSelect : PropTypes.func.isRequired
+}
 
 export default Course;

@@ -8,19 +8,24 @@ import Header from './components/Header/Header'
 
 function App() {
 
+
+
   const [carts, setCarts] = useState([]);
+
 
   const handelSelect = course => {
     // console.log(course);
     const isExist = carts.find(cart => cart.id === course.id);
+
     if (!isExist) {
       const newCarts = [...carts, course];
       setCarts(newCarts);
     }
-    else{
+    else {
       alert('Already Selected !!!');
     }
   }
+
 
   return (
     <>

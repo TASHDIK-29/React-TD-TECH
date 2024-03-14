@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import Course from "../Course/Course";
+import PropTypes from 'prop-types';
 
 const Courses = ({handelSelect}) => {
 
@@ -23,5 +24,9 @@ const Courses = ({handelSelect}) => {
         </div>
     );
 };
+
+Courses.propTypes={
+    handelSelect : PropTypes.func.isRequired
+}
 
 export default Courses;

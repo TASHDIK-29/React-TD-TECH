@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from 'prop-types';
 
 const Carts = ({ carts }) => {
     console.log(carts);
@@ -23,23 +24,9 @@ const Carts = ({ carts }) => {
 
         }
         else{
-            alert('Credit Limit Exceed');
-
-            for (let i = 0; i < carts.length - 1 ; i++)
-            {
-                let newCart=[];
-                newCart.push(carts[i]);
-            }
-
-
-
-
+            return alert('Credit Limit Exceed');
 
         }
-
-
-
-
     }, [carts])
 
 
@@ -64,5 +51,9 @@ const Carts = ({ carts }) => {
         </div>
     );
 };
+
+Carts.propTypes={
+    carts : PropTypes.array
+}
 
 export default Carts;
