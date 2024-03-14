@@ -1,10 +1,11 @@
-
-
 import { useState } from 'react'
 import './App.css'
 import Carts from './components/Carts/Carts'
 import Courses from './components/Courses/Courses'
 import Header from './components/Header/Header'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
 
 
   const handelSelect = course => {
+    
     // console.log(course);
     const isExist = carts.find(cart => cart.id === course.id);
 
@@ -27,6 +29,8 @@ function App() {
         const newCarts = [...carts, course];
         setCarts(newCarts);
 
+        toast.success(`${course.title} Successfully Added`);
+
         const newCredit = parseFloat(course.credit)
         
         setRemainingCredit(remainingCredit - newCredit);
@@ -36,15 +40,13 @@ function App() {
         setCost(cost + newCost);
       }
       else{
-        return alert('Credit Limit Exceed');
+        return toast.error(`Course Credit Exceed`);
 
     }
     }
     else {
-      alert('Already Selected !!!');
+      toast.warning(`${course.title} Already Selected`);
     }
-
-    
         
   }
 
@@ -64,6 +66,7 @@ function App() {
             <Carts carts={carts} credit={credit} cost={cost}></Carts>
           </div>
         </div>
+        <ToastContainer />
       </main>
     </>
   )
