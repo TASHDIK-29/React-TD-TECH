@@ -16,7 +16,7 @@ const Courses = ({handelSelect}) => {
 
 
     return (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 gap-4">
             {/* <h1>Courses</h1> */}
             {
                 courses.map(course => <Course key={course.id} course={course} handelSelect={handelSelect}></Course>)
