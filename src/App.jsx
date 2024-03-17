@@ -59,10 +59,10 @@ function App() {
           <h1 className='text-3xl font-bold'>OFFERING COURSES</h1>
         </div>
         <div className='flex justify-between gap-3'>
-          <div className='w-3/4'>
+          <div className='w-3/5'>
             <Courses handelSelect={handelSelect}></Courses>
           </div>
-          <div className='w-1/4'>
+          <div className='w-2/5'>
             <Carts carts={carts} credit={credit} cost={cost}></Carts>
           </div>
         </div>
